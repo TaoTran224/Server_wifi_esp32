@@ -1,0 +1,15 @@
+D:\1_Project\server\Server_local\Server_local\bin\Debug\net10.0\Server_local.exe
+D:\1_Project\server\Server_local\Server_local\bin\Debug\net10.0\Server_local.deps.json
+D:\1_Project\server\Server_local\Server_local\bin\Debug\net10.0\Server_local.runtimeconfig.json
+D:\1_Project\server\Server_local\Server_local\bin\Debug\net10.0\Server_local.dll
+D:\1_Project\server\Server_local\Server_local\bin\Debug\net10.0\Server_local.pdb
+D:\1_Project\server\Server_local\Server_local\obj\Debug\net10.0\Server_local.GeneratedMSBuildEditorConfig.editorconfig
+D:\1_Project\server\Server_local\Server_local\obj\Debug\net10.0\Server_local.AssemblyInfoInputs.cache
+D:\1_Project\server\Server_local\Server_local\obj\Debug\net10.0\Server_local.AssemblyInfo.cs
+D:\1_Project\server\Server_local\Server_local\obj\Debug\net10.0\Server_local.csproj.CoreCompileInputs.cache
+D:\1_Project\server\Server_local\Server_local\obj\Debug\net10.0\Server_local.dll
+D:\1_Project\server\Server_local\Server_local\obj\Debug\net10.0\refint\Server_local.dll
+D:\1_Project\server\Server_local\Server_local\obj\Debug\net10.0\Server_local.pdb
+D:\1_Project\server\Server_local\Server_local\obj\Debug\net10.0\Server_local.genruntimeconfig.cache
+D:\1_Project\server\Server_local\Server_local\obj\Debug\net10.0\ref\Server_local.dll
+D:\1_Project\server\Server_local\Server_local\obj\Debug\net10.0\Server_l.B2FAB425.Up2Date
