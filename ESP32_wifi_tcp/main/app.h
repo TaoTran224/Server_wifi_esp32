@@ -15,6 +15,8 @@ typedef struct {
     uint32_t heartbeat_interval_sec;// Chu kỳ gửi heartbeat (giây)
 } app_config_t;
 
+app_config_t *app_config_get_ptr(void);
+
 
 // ============================================================================
 // 2. STRUCT ĐÓNG GÓI LỆNH / SỰ KIỆN TỪ UART SANG TCP (Dùng cho Callback)

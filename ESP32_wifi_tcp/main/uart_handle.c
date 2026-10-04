@@ -1,6 +1,7 @@
 #include "uart_handle.h"
 #include "driver/uart.h"
 #include "esp_log.h"
+#include <stdio.h>
 #include <string.h>
 #include <strings.h>
 #include <stdlib.h>
@@ -224,30 +225,42 @@ format_error:
 void check_uart_commands(void)
 {
     size_t length = 0;
-    
+
     if (uart_get_buffered_data_len(UART_PORT_NUM, &length) == ESP_OK && length > 0) {
         uint8_t data[UART_BUF_SIZE];
         int len = uart_read_bytes(UART_PORT_NUM, data, sizeof(data) - 1, pdMS_TO_TICKS(10));
         if (len > 0) {
             data[len] = '\0';
-            
-            char *p = (char *)data;
-            while (*p) {
-                if (*p == '\r' || *p == '\n') {
-                    *p = '\0';
-                    break;
-                }
-                p++;
-            }
 
-            if (strncasecmp((char *)data, "at+infowifi", 11) == 0) {
-                parse_at_wifi_command((char *)data);
-            } 
-            else if (strncasecmp((char *)data, "at+tcp", 6) == 0) {
-                parse_at_tcp_command((char *)data);
-            }
-            else if (strncasecmp((char *)data, "at+heartbeat", 12) == 0) {
-                parse_at_heartbeat_command((char *)data);
+            char *line = (char *)data;
+            while (line != NULL) {
+                char *next = strpbrk(line, "\r\n");
+                if (next != NULL) {
+                    *next = '\0';
+                    next = next + 1;
+                    while (*next == '\r' || *next == '\n') {
+                        next++;
+                    }
+                }
+
+                char *trimmed = line;
+                while (*trimmed == ' ' || *trimmed == '\t') {
+                    trimmed++;
+                }
+
+                if (*trimmed != '\0') {
+                    if (strncasecmp(trimmed, "at+infowifi", 11) == 0) {
+                        parse_at_wifi_command(trimmed);
+                    }
+                    else if (strncasecmp(trimmed, "at+tcp", 6) == 0) {
+                        parse_at_tcp_command(trimmed);
+                    }
+                    else if (strncasecmp(trimmed, "at+heartbeat", 12) == 0) {
+                        parse_at_heartbeat_command(trimmed);
+                    }
+                }
+
+                line = next;
             }
         }
     }

@@ -3,12 +3,26 @@
 #include "nvs_flash.h"
 #include "nvs.h"
 #include "esp_log.h"
+#include <stdio.h>
+#include <string.h>
+
 static const char *TAG = "CONFIG_NVS";
 static app_config_t s_app_config;
 
-app_config_t* app_config_get_ptr(void)
+app_config_t *app_config_get_ptr(void)
 {
     return &s_app_config;
+}
+
+esp_err_t app_config_init(void)
+{
+    memset(&s_app_config, 0, sizeof(s_app_config));
+    snprintf(s_app_config.wifi_ssid, sizeof(s_app_config.wifi_ssid), "My_WiFi");
+    snprintf(s_app_config.wifi_pass, sizeof(s_app_config.wifi_pass), "12345678");
+    snprintf(s_app_config.server_ip, sizeof(s_app_config.server_ip), "192.168.1.100");
+    s_app_config.server_port = 8080;
+    s_app_config.heartbeat_interval_sec = 60;
+    return ESP_OK;
 }
 
 esp_err_t app_config_save_nvs(void)
