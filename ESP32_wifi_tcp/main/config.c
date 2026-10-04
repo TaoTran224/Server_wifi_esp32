@@ -9,8 +9,6 @@ static app_config_t s_config = {
     .heartbeat_interval_sec = 60
 };
 
-app_config_t* app_config_get_ptr(void) {
-    return &s_config;
 
 }
 

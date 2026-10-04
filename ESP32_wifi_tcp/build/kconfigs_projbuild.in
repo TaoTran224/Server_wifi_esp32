@@ -3,4 +3,3 @@ source "C:/Espressif/frameworks/esp-idf-v5.5.5/components/esp_app_format/Kconfig
 source "C:/Espressif/frameworks/esp-idf-v5.5.5/components/esp_rom/Kconfig.projbuild"
 source "C:/Espressif/frameworks/esp-idf-v5.5.5/components/esptool_py/Kconfig.projbuild"
 source "C:/Espressif/frameworks/esp-idf-v5.5.5/components/partition_table/Kconfig.projbuild"
-source "D:/1_Project/ESP32_wifi_tcp/main/Kconfig.projbuild"

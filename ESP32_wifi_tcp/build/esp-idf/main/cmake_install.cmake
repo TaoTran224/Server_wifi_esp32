@@ -1,4 +1,4 @@
-# Install script for directory: D:/1_Project/ESP32_wifi_tcp/main
+# Install script for directory: D:/1_Project/Server_wifi_esp32/ESP32_wifi_tcp/main
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

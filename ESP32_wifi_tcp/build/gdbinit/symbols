@@ -18,8 +18,8 @@ end
 
 # Load bootloader symbols
 set confirm off
-    add-symbol-file D:/1_Project/ESP32_wifi_tcp/build/bootloader/bootloader.elf
+    add-symbol-file D:/1_Project/Server_wifi_esp32/ESP32_wifi_tcp/build/bootloader/bootloader.elf
 set confirm on
 
 # Load application symbols
-file D:/1_Project/ESP32_wifi_tcp/build/ESP32_wifi_tcp.elf
+file D:/1_Project/Server_wifi_esp32/ESP32_wifi_tcp/build/ESP32_wifi_tcp.elf

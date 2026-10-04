@@ -6,7 +6,6 @@
 #include "esp_log.h"
 #include "esp_err.h"
 
-app_config_t* app_config_get_ptr(void);
 
 // Khởi tạo và đọc cấu hình từ NVS Flash
 esp_err_t app_config_init(void);

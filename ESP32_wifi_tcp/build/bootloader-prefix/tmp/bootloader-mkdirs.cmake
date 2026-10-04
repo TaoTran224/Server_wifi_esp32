@@ -10,18 +10,18 @@ if(NOT EXISTS "C:/Espressif/frameworks/esp-idf-v5.5.5/components/bootloader/subp
   file(MAKE_DIRECTORY "C:/Espressif/frameworks/esp-idf-v5.5.5/components/bootloader/subproject")
 endif()
 file(MAKE_DIRECTORY
-  "D:/1_Project/ESP32_wifi_tcp/build/bootloader"
-  "D:/1_Project/ESP32_wifi_tcp/build/bootloader-prefix"
-  "D:/1_Project/ESP32_wifi_tcp/build/bootloader-prefix/tmp"
-  "D:/1_Project/ESP32_wifi_tcp/build/bootloader-prefix/src/bootloader-stamp"
-  "D:/1_Project/ESP32_wifi_tcp/build/bootloader-prefix/src"
-  "D:/1_Project/ESP32_wifi_tcp/build/bootloader-prefix/src/bootloader-stamp"
+  "D:/1_Project/Server_wifi_esp32/ESP32_wifi_tcp/build/bootloader"
+  "D:/1_Project/Server_wifi_esp32/ESP32_wifi_tcp/build/bootloader-prefix"
+  "D:/1_Project/Server_wifi_esp32/ESP32_wifi_tcp/build/bootloader-prefix/tmp"
+  "D:/1_Project/Server_wifi_esp32/ESP32_wifi_tcp/build/bootloader-prefix/src/bootloader-stamp"
+  "D:/1_Project/Server_wifi_esp32/ESP32_wifi_tcp/build/bootloader-prefix/src"
+  "D:/1_Project/Server_wifi_esp32/ESP32_wifi_tcp/build/bootloader-prefix/src/bootloader-stamp"
 )
 
 set(configSubDirs )
 foreach(subDir IN LISTS configSubDirs)
-    file(MAKE_DIRECTORY "D:/1_Project/ESP32_wifi_tcp/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
+    file(MAKE_DIRECTORY "D:/1_Project/Server_wifi_esp32/ESP32_wifi_tcp/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
 endforeach()
 if(cfgdir)
-  file(MAKE_DIRECTORY "D:/1_Project/ESP32_wifi_tcp/build/bootloader-prefix/src/bootloader-stamp${cfgdir}") # cfgdir has leading slash
+  file(MAKE_DIRECTORY "D:/1_Project/Server_wifi_esp32/ESP32_wifi_tcp/build/bootloader-prefix/src/bootloader-stamp${cfgdir}") # cfgdir has leading slash
 endif()
