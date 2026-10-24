@@ -16,6 +16,7 @@
 #include "nvs.h"
 
 #include "uart_handle.h"
+#include "log.h"
 
 static const char *TAG = "ESP32_SUPER_LOOP";
 
@@ -33,6 +34,9 @@ void app_main(void)
     // B. Khởi tạo UART Driver
     uart_handle_init();
     // G. Super-Loop
+ #ifdef DBG_SEND
+     DBG_SendStr("APP START\r\n");
+ #endif
     while (1)
      {
         check_uart_commands();
